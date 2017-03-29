@@ -3,11 +3,9 @@
 {% block main %}
 {% raw %}
 <div ng-app="imgApp" ng-controller="imgCtrl">
-    <ul>
-        <li ng-repeat="pic in images">
-            <img src="{{ pic }}"/>
-        </li>
-    </ul>
+    <div id="pics">
+        <img ng-repeat="pic in images" src="{{ pic }}"/>
+    </div>
 </div>
 {% endraw %}
 {% endblock %}
