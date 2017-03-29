@@ -1,16 +1,18 @@
 {% extends "base.html" %}
 
 {% block main %}
+{% raw %}
 <div ng-app="imgApp" ng-controller="imgCtrl">
     <ul>
-        <li ng-repeat="pic in images track by $index"> 
+        <li ng-repeat="pic in images">
             <img src="{{ pic }}"/>
         </li>
     </ul>
 </div>
+{% endraw %}
 {% endblock %}
 
 {% block js %}
-<script type="text/javascript" src="/static/js/angular.min.js"></script>
-<script type="text/javascript" src="/static/js/app.js"></script>
+<script src="/static/js/angular.min.js"></script>
+<script src="/static/js/app.js"></script>
 {% endblock %}

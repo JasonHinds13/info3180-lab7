@@ -26,6 +26,8 @@ def getImg():
     
     #image = """<img src="%s"><br />"""
     for img in soup.findAll("img", src=True):
-        imgs.append(img["src"])
+        # eliminate duplicate links
+        if img["src"] not in imgs:
+            imgs.append(img["src"])
        
     return imgs
